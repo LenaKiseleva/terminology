@@ -16,14 +16,16 @@ class Manual(models.Model):
         verbose_name='Описание',
         max_length=200,
         null=True,
+        blank=True,
     )
     version = models.CharField(
         verbose_name='Версия',
         max_length=200,
+        db_index=True,
         unique=True,
     )
     commencement_date = models.DateField(
-        verbose_name='Дата начала действия справочника этой версии',
+        verbose_name='Дата начала действия справочника',
     )
     pub_date = models.DateTimeField(
         verbose_name='Дата публикации',
@@ -36,7 +38,7 @@ class Manual(models.Model):
         verbose_name_plural = 'Справочники'
 
     def __str__(self):
-        return f'Справочник {self.name}. Версия {self.version}'
+        return f'Справочник: {self.name}. Версия: {self.version}'
 
 
 class UnitManual(models.Model):
@@ -53,3 +55,15 @@ class UnitManual(models.Model):
         verbose_name='Значение элемента',
         max_length=200,
     )
+    pub_date = models.DateTimeField(
+        verbose_name='Дата публикации',
+        auto_now_add=True,
+    )
+
+    class Meta:
+        ordering = ('-pub_date',)
+        verbose_name = 'Элемент справочника'
+        verbose_name_plural = 'Элементы справочника'
+
+    def __str__(self):
+        return f'Справочник: {self.manual}. Значение: {self.value_unit}'
