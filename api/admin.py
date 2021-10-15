@@ -1,3 +1,23 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Manual, UnitManual
+
+
+class ManualAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'slug', 'description',
+                    'version', 'commencement_date', 'pub_date')
+    search_fields = ('version', 'commencement_date')
+    list_filter = ('pub_date', 'version')
+    empty_value_display = '-не указано-'
+
+
+admin.site.register(Manual, ManualAdmin)
+
+
+class UnitManualAdmin(admin.ModelAdmin):
+    list_display = ('id', 'manual', 'code_unit', 'value_unit', 'pub_date')
+    list_filter = ('pub_date',)
+    empty_value_display = '-не указано-'
+
+
+admin.site.register(UnitManual, UnitManualAdmin)
