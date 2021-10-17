@@ -5,12 +5,12 @@ class Manual(models.Model):
     name = models.CharField(
         verbose_name='Наименование справочника',
         max_length=200,
-        unique=True,
+        unique=False,
     )
-    slug = models.SlugField(
+    short_name = models.CharField(
         verbose_name='Короткое наименование',
         max_length=50,
-        unique=True,
+        unique=False,
     )
     description = models.CharField(
         verbose_name='Описание',
@@ -22,7 +22,6 @@ class Manual(models.Model):
         verbose_name='Версия',
         max_length=200,
         db_index=True,
-        unique=True,
     )
     commencement_date = models.DateField(
         verbose_name='Дата начала действия справочника',
@@ -36,6 +35,12 @@ class Manual(models.Model):
         ordering = ('-pub_date',)
         verbose_name = 'Справочник'
         verbose_name_plural = 'Справочники'
+        constraints = [
+            models.UniqueConstraint(
+                fields=['name', 'version'],
+                name='unique_Version'
+            )
+        ]
 
     def __str__(self):
         return f'Справочник: {self.name}. Версия: {self.version}'
