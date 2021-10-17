@@ -4,7 +4,7 @@ from .models import Manual, UnitManual
 
 
 class ManualAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'slug', 'description',
+    list_display = ('id', 'name', 'short_name', 'description',
                     'version', 'commencement_date', 'pub_date')
     search_fields = ('version', 'commencement_date')
     list_filter = ('pub_date', 'version')
