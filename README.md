@@ -39,144 +39,60 @@ Request:
 http://127.0.0.1:8000/api/v1/manuals/
 
 Response:
-
 {
     "count": 5,
     "next": null,
     "previous": null,
     "results": [
         {
-            "id": 5,
-            "name": "Справочник о номерах",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 2",
-            "commencement_date": "2021-10-18",
-            "manual": []
+            "id": "e37a3cd0-2829-4b7a-8f5c-39ad31ae6c40",
+            "name": "Отделения",
+            "short_name": "Отделения",
+            "description": null,
+            "version": "4.0",
+            "date_commencement": "2021-10-13",
+            "date_expiration": "2021-10-28",
+            "pub_date": "2021-10-26T18:57:19.228866Z"
         },
         {
-            "id": 4,
-            "name": "Справочник о номерах",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 1",
-            "commencement_date": "2021-10-17",
-            "manual": [
-                {
-                    "id": 12,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:50:34.013416Z"
-                }
-            ]
+            "id": "b51b7c6e-f575-407e-83e1-00e018620b95",
+            "name": "Специальности",
+            "short_name": "Специальности",
+            "description": null,
+            "version": "4.0",
+            "date_commencement": "2021-10-30",
+            "date_expiration": "2021-10-31",
+            "pub_date": "2021-10-26T12:14:34.359083Z"
         },
         {
-            "id": 3,
-            "name": "Справочник о заболеваниях",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 3",
-            "commencement_date": "2021-10-05",
-            "manual": [
-                {
-                    "id": 15,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:51:16.804249Z"
-                }
-            ]
+            "id": "62335f53-2ab3-40ac-b13a-060e9df68ce6",
+            "name": "Специальности",
+            "short_name": "Специальности",
+            "description": null,
+            "version": "3.0",
+            "date_commencement": "2021-10-26",
+            "date_expiration": "2021-10-30",
+            "pub_date": "2021-10-26T12:14:08.760820Z"
         },
         {
-            "id": 2,
-            "name": "Справочник о заболеваниях",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 2",
-            "commencement_date": "2021-10-17",
-            "manual": [
-                {
-                    "id": 14,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:51:06.415915Z"
-                }
-            ]
+            "id": "70660959-3fa5-48ca-ab20-25a004225a2a",
+            "name": "Специальности",
+            "short_name": "Специальности",
+            "description": null,
+            "version": "2.0",
+            "date_commencement": "2021-10-21",
+            "date_expiration": "2021-10-25",
+            "pub_date": "2021-10-26T12:13:46.679387Z"
         },
         {
-            "id": 1,
-            "name": "Справочник о заболеваниях",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 1",
-            "commencement_date": "2021-10-16",
-            "manual": [
-                {
-                    "id": 11,
-                    "code_unit": "Код элемента 11",
-                    "value_unit": "Значение элемента 11",
-                    "pub_date": "2021-10-17T08:14:56.865498Z"
-                },
-                {
-                    "id": 10,
-                    "code_unit": "Код элемента 10",
-                    "value_unit": "Значение элемента 10",
-                    "pub_date": "2021-10-17T08:14:45.017441Z"
-                },
-                {
-                    "id": 9,
-                    "code_unit": "Код элемента 9",
-                    "value_unit": "Значение элемента 9",
-                    "pub_date": "2021-10-17T08:14:33.436276Z"
-                },
-                {
-                    "id": 8,
-                    "code_unit": "Код элемента 8",
-                    "value_unit": "Значение элемента 8",
-                    "pub_date": "2021-10-17T08:14:19.958959Z"
-                },
-                {
-                    "id": 7,
-                    "code_unit": "Код элемента 7",
-                    "value_unit": "Значение элемента 7",
-                    "pub_date": "2021-10-17T08:14:04.451044Z"
-                },
-                {
-                    "id": 6,
-                    "code_unit": "Код элемента 6",
-                    "value_unit": "Значение элемента 6",
-                    "pub_date": "2021-10-17T08:13:44.320102Z"
-                },
-                {
-                    "id": 5,
-                    "code_unit": "Код элемента 5",
-                    "value_unit": "Значение элемента 5",
-                    "pub_date": "2021-10-17T08:13:22.771304Z"
-                },
-                {
-                    "id": 4,
-                    "code_unit": "Код элемента 4",
-                    "value_unit": "Значение элемента 4",
-                    "pub_date": "2021-10-17T08:13:05.893598Z"
-                },
-                {
-                    "id": 3,
-                    "code_unit": "Код элемента 3",
-                    "value_unit": "Значение элемента 3",
-                    "pub_date": "2021-10-17T08:12:41.554471Z"
-                },
-                {
-                    "id": 2,
-                    "code_unit": "Код элемента 2",
-                    "value_unit": "Значение элемента 2",
-                    "pub_date": "2021-10-17T08:12:05.192050Z"
-                },
-                {
-                    "id": 1,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-15T11:15:07.771515Z"
-                }
-            ]
+            "id": "4958859a-c79b-4350-a826-edb11235e712",
+            "name": "Специальности",
+            "short_name": "Специальности",
+            "description": null,
+            "version": "1.0",
+            "date_commencement": "2021-10-10",
+            "date_expiration": "2021-10-20",
+            "pub_date": "2021-10-26T12:13:14.514948Z"
         }
     ]
 }
@@ -187,7 +103,7 @@ Response:
 ```bash
 Request:
 
-http://127.0.0.1:8000/api/v1/manuals/?commencement_date=2021-10-17
+http://127.0.0.1:8000/api/v1/manuals/relevant/2021-10-21
 
 Response:
 
@@ -197,36 +113,24 @@ Response:
     "previous": null,
     "results": [
         {
-            "id": 4,
-            "name": "Справочник о номерах",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 1",
-            "commencement_date": "2021-10-17",
-            "manual": [
-                {
-                    "id": 12,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:50:34.013416Z"
-                }
-            ]
+            "id": "e37a3cd0-2829-4b7a-8f5c-39ad31ae6c40",
+            "name": "Отделения",
+            "short_name": "Отделения",
+            "description": null,
+            "version": "4.0",
+            "date_commencement": "2021-10-13",
+            "date_expiration": "2021-10-28",
+            "pub_date": "2021-10-26T18:57:19.228866Z"
         },
         {
-            "id": 2,
-            "name": "Справочник о заболеваниях",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 2",
-            "commencement_date": "2021-10-17",
-            "manual": [
-                {
-                    "id": 14,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:51:06.415915Z"
-                }
-            ]
+            "id": "70660959-3fa5-48ca-ab20-25a004225a2a",
+            "name": "Специальности",
+            "short_name": "Специальности",
+            "description": null,
+            "version": "2.0",
+            "date_commencement": "2021-10-21",
+            "date_expiration": "2021-10-25",
+            "pub_date": "2021-10-26T12:13:46.679387Z"
         }
     ]
 }
@@ -237,29 +141,27 @@ Response:
 ```bash
 Request:
 
-http://127.0.0.1:8000/api/v1/manuals/?version=Версия+3/
+http://127.0.0.1:8000/api/v1/units/defined/?name=Специальности
 
 Response:
 {
-    "count": 1,
+    "count": 2,
     "next": null,
     "previous": null,
     "results": [
         {
-            "id": 3,
-            "name": "Справочник о заболеваниях",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 3",
-            "commencement_date": "2021-10-05",
-            "manual": [
-                {
-                    "id": 15,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:51:16.804249Z"
-                }
-            ]
+            "id": "cf5478cc-8a07-4b88-be87-77b742bb3797",
+            "code_unit": "2",
+            "value_unit": "Хирург",
+            "pub_date": "2021-10-26T14:09:43.452650Z",
+            "manual": "62335f53-2ab3-40ac-b13a-060e9df68ce6"
+        },
+        {
+            "id": "f73f8874-7926-4388-ab21-0aada5114cd3",
+            "code_unit": "1",
+            "value_unit": "Терапевт",
+            "pub_date": "2021-10-26T14:09:23.724363Z",
+            "manual": "62335f53-2ab3-40ac-b13a-060e9df68ce6"
         }
     ]
 }
@@ -270,30 +172,56 @@ Response:
 ```bash
 Request:
 
-http://127.0.0.1:8000/api/v1/manuals/?name=Справочник+о+заболеваниях&version=Версия+2/
+http://127.0.0.1:8000/api/v1/units/defined/?name=Специальности&version=4.0
 
 Response:
 {
-    "count": 1,
+    "count": 2,
     "next": null,
     "previous": null,
     "results": [
         {
-            "id": 2,
-            "name": "Справочник о заболеваниях",
-            "short_name": "2021-10-17 10:34:29.553040+00:00",
-            "description": "Описание",
-            "version": "Версия 2",
-            "commencement_date": "2021-10-17",
-            "manual": [
-                {
-                    "id": 14,
-                    "code_unit": "Код элемента 1",
-                    "value_unit": "Значение элемента 1",
-                    "pub_date": "2021-10-17T09:51:06.415915Z"
-                }
-            ]
+            "id": "7a383a51-efc1-4148-88b5-715ba4e867d3",
+            "code_unit": "5",
+            "value_unit": "Окулист",
+            "pub_date": "2021-10-26T18:55:34.344409Z",
+            "manual": "b51b7c6e-f575-407e-83e1-00e018620b95"
+        },
+        {
+            "id": "4c28c61d-2d57-42f6-8de9-8d42fbea41d5",
+            "code_unit": "1",
+            "value_unit": "Терапевт",
+            "pub_date": "2021-10-26T17:19:42.930525Z",
+            "manual": "b51b7c6e-f575-407e-83e1-00e018620b95"
         }
     ]
 }
 ```
+
+### Валидация элемента заданного справочника по указанной версии
+```bash
+Request:
+
+http://127.0.0.1:8000/api/v1/units/validation/
+
+Body:
+
+{
+    "manual": {
+        "name": "Специальности",
+        "version": 3.0
+    },
+    "unit_manual": {
+        "code_unit": 2
+    }
+}
+
+Response:
+
+{
+    "id": "cf5478cc-8a07-4b88-be87-77b742bb3797",
+    "code_unit": "2",
+    "value_unit": "Хирург",
+    "pub_date": "2021-10-26T14:09:43.452650Z",
+    "manual": "62335f53-2ab3-40ac-b13a-060e9df68ce6"
+}
