@@ -4,9 +4,9 @@ from .models import Manual, UnitManual
 
 
 class ManualAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'short_name', 'description',
-                    'version', 'commencement_date', 'pub_date')
-    search_fields = ('version', 'commencement_date')
+    list_display = ('id', 'name', 'short_name', 'description', 'version',
+                    'date_commencement', 'date_expiration', 'pub_date')
+    search_fields = ('version', 'date_commencement')
     list_filter = ('pub_date', 'version')
     empty_value_display = '-не указано-'
 
