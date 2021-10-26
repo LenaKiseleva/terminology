@@ -1,7 +1,15 @@
+import uuid
+
 from django.db import models
 
 
 class Manual(models.Model):
+    id = models.UUIDField(
+        primary_key=True,
+        verbose_name='Глобальный идентификатор',
+        default=uuid.uuid4,
+        editable=False,
+    )
     name = models.CharField(
         verbose_name='Наименование справочника',
         max_length=200,
@@ -23,8 +31,11 @@ class Manual(models.Model):
         max_length=200,
         db_index=True,
     )
-    commencement_date = models.DateField(
+    date_commencement = models.DateField(
         verbose_name='Дата начала действия справочника',
+    )
+    date_expiration = models.DateField(
+        verbose_name='Дата окончания действия справочника',
     )
     pub_date = models.DateTimeField(
         verbose_name='Дата публикации',
@@ -43,10 +54,16 @@ class Manual(models.Model):
         ]
 
     def __str__(self):
-        return f'Справочник: {self.name}. Версия: {self.version}'
+        return f'Справочник: {self.name}. Версия: {self.version} от {self.date_commencement}'
 
 
 class UnitManual(models.Model):
+    id = models.UUIDField(
+        primary_key=True,
+        verbose_name='Глобальный идентификатор',
+        default=uuid.uuid4,
+        editable=False,
+    )
     manual = models.ForeignKey(
         Manual,
         on_delete=models.CASCADE,
@@ -69,6 +86,12 @@ class UnitManual(models.Model):
         ordering = ('-pub_date',)
         verbose_name = 'Элемент справочника'
         verbose_name_plural = 'Элементы справочника'
+        constraints = [
+            models.UniqueConstraint(
+                fields=['manual', 'code_unit'],
+                name='unique_Code_unit'
+            )
+        ]
 
     def __str__(self):
         return f'Справочник: {self.manual}. Значение: {self.value_unit}'
