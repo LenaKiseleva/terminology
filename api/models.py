@@ -54,7 +54,11 @@ class Manual(models.Model):
         ]
 
     def __str__(self):
-        return f'Справочник: {self.name}. Версия: {self.version} от {self.date_commencement}'
+        return (
+            f'Справочник: {self.name}. '
+            f'Версия: {self.version} '
+            f'от {self.date_commencement}'
+        )
 
 
 class UnitManual(models.Model):
